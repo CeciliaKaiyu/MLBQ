@@ -10,13 +10,17 @@ from Tsunami.Tsunami_src.Kernels import *
 
 # Read inner integral data
 data = pd.read_csv(r"../Tsunami_Data/Inner_32.csv", header=None)
+# For limit=6000s change data to Inner_160.csv
+# For limit=12000s change data to Inner_320.csv
 
 N_runs=20
 
 # energy flux
 alleta2_RS = data[[0]]
 alleta2_RS = alleta2_RS.to_numpy()
-alleta2_RS =np.reshape(alleta2_RS,(N_runs,92))
+alleta2_RS =np.reshape(alleta2_RS,(N_runs,92)) 
+# For limit=6000s change 92 to 460 
+# For limit=12000s change 92 to 920
 alleta2_RS = torch.tensor(alleta2_RS)
 alleta2_RS = alleta2_RS*9.8
 
