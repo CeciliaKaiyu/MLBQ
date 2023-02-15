@@ -57,7 +57,7 @@ HV2160_V = np.sum(Est160[0:,0:,[5,7]],axis=1)
 HV2320_E = np.sum(Est320[0:,0:,[4,6]],axis=1)
 HV2320_V = np.sum(Est320[0:,0:,[5,7]],axis=1)
 
-HV2_E = np.sum(Est[0:,2],axis=0)
+HV2_E = np.sum(Est[0:,1],axis=0)
 
 # error
 Err1_32 = eta_E-eta32_E
