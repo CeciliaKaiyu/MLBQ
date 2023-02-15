@@ -60,9 +60,8 @@ def Coverage_Prob(Acc_Est, E,V,CI=np.array([0.2,0.4,0.6,0.8])):
     nCI=CI.shape[0]
 
     # create an array to store result
-    Cov_Prob=np.zeros((n_level,nCI))-1.
+    Cov_Prob=np.zeros((n_level,nCI))
 
-    # if the variance are positive
     if np.sum(V<0)==0:
 
         # Iterate for different budget sizes
@@ -77,23 +76,7 @@ def Coverage_Prob(Acc_Est, E,V,CI=np.array([0.2,0.4,0.6,0.8])):
                                          Acc_Est < (E[i, :] + Zscore * np.sqrt(V[i, :])))
                 Cov_Prob[i, k] = np.mean(TFArray)
 
-    # if there exist negative variance
     else:
-        repo = input("Exist negative variance, continue by discarding negative runs (Y), or stop (N)?")
-
-        if repo=="Y":
-
-            # Iterate for different budget sizes
-
-            for i in range(n_level):
-                ind = V[i, 0:] > 0
-
-                # compute coverage probabilty at credible level CI[nCI]
-
-                for k in range(nCI):
-                    Zscore = CI_score[k]
-                    TFArray = np.logical_and(Acc_Est > (E[i, ind] - Zscore * np.sqrt(V[i, ind])),
-                                             Acc_Est < (E[i, ind] + Zscore * np.sqrt(V[i, ind])))
-                    Cov_Prob[i, k] = np.mean(TFArray)
+        Cov_Prob=np.zeros((n_level,nCI))-1.
 
     return Cov_Prob
