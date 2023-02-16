@@ -1,4 +1,4 @@
-# BQ estimator function for level l
+# MLBQ estimator separable kernels
 
 from PoissonEq.PE_app.SepK.src.optim_sk import *
 
