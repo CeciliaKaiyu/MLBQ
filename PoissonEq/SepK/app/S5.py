@@ -31,7 +31,8 @@ def PE_S3S4sampler(N):
 
 # open the file in the write mode
 PE_Est = open('S5_005.csv', 'w')
-
+#for implementation with different separable kernel
+#change b in sep_kernel() and BQ_sk() 
 
 # create the csv writer
 writer = csv.writer(PE_Est)
