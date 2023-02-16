@@ -23,7 +23,7 @@ S3El1=Get_Output(S3S4data,types=0,N_budget=3,N_runs=100,L=3,l=2)--1/12
 
 # Get result for setting 4
 S4E=Get_Output(S3S4data,types=2,N_budget=3,N_runs=100,L=3,l=3)--1/12
-
+S4El1=Get_Output(S3S4data,types=2,N_budget=3,N_runs=100,L=3,l=2)--1/12
 
 #compute the covarage probability
 Cov_ProbS3=Coverage_Prob(Acc_Est=0, E=S3E,V=S3V,CI=np.array([0.2,0.4,0.6,0.8]))
