@@ -32,7 +32,7 @@ def Matern25_ODE(X,hyper):
 
 
 
-#Gaussian kernel for ODE example
+#squared exponential kernel for ODE example
 def Gauss_ODE(X,hyper):
     '''
 
