@@ -93,7 +93,7 @@ def IE_Matern25_ODE1(hyper):
 
 
 
-#Kernel mean when using Gaussian kernel  
+#Kernel mean when using squared exponential kernel  
 def KM_Gauss_ODE(X,hyper):
     '''
 
@@ -114,7 +114,7 @@ def KM_Gauss_ODE(X,hyper):
     return KM
 
 
-#Initial Error when using Gaussian kernel
+#Initial Error when using squared exponential kernel
 def IE_Gauss_ODE(hyper):
     '''
 
