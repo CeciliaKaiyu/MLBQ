@@ -4,7 +4,7 @@ from ODE.ODE_app.Get_MultiEst import *
 
 #--------------------Step 1 : Prepare the data ------------------------------------
 
-# MLBQ &M LMC IID
+# MLBQ & MLMC IID
 S3S4data = pd.read_csv(r"S3S4.csv", header=None)
 S3E=Get_Output(S3S4data,types=0,N_budget=3,N_runs=100,L=3,l=3)--1/12
 S4E=Get_Output(S3S4data,types=2,N_budget=3,N_runs=100,L=3,l=3)--1/12
