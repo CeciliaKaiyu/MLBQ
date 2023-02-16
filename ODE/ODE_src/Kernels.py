@@ -38,7 +38,7 @@ def Gauss_ODE(X,hyper):
 
     :param X: \omega_1,\omega_2
     :param hyper: length-scales**2
-    :return: Gaussian covariance matrix
+    :return: SE covariance matrix
     '''
     #take \omega_1,\omega_2 from  X
     a=X[0:,0]
