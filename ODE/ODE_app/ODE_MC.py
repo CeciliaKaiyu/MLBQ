@@ -44,8 +44,6 @@ for i in range(100):
 
         if n_level == 0:
             my_nugget = [1e-10]
-        elif n_level == 1:
-            my_nugget = [1e-8]
         else:
             my_nugget = [1e-6]
 
