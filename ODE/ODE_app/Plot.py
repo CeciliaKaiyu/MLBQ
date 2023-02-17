@@ -7,8 +7,8 @@ from ODE.ODE_app.Get_MultiEst import *
 # BQ
 BQdata = pd.read_csv(r"ODE_BQ.csv", header=None)
 
-BQE = Get_Output(BQdata,types=0,N_budget=3,N_runs=100,L=1,l=1)--3.417076
-BQV = Get_Output(BQdata,types=1,N_budget=3,N_runs=100,L=1,l=1)
+BQE = Get_Output(BQdata,types=0,N_budget=2,N_runs=100,L=1,l=1)--3.417076
+BQV = Get_Output(BQdata,types=1,N_budget=2,N_runs=100,L=1,l=1)
 
 # estimation with optimal sample size of MLBQ with Matern 2.5 MLMC and IID samples
 MCdata = pd.read_csv(r'ODE_MC.csv', header=None)
@@ -17,26 +17,26 @@ MCbigdata = pd.read_csv(r"ODE_large.csv", header=None)
 # estimation with optimal sample size of MLBQ with SE kernel MLMC and IID samples
 Gaussdata = pd.read_csv(r'ODE_MC_withGauss.csv', header=None)
 
-MLBMCE = Get_Output(MCdata,types=0,N_budget=3,N_runs=100,L=3,l=3)--3.417076
-MLBMCEl1 = Get_Output(MCdata,types=0,N_budget=3,N_runs=100,L=3,l=2)--3.417076
-MLBMCV = Get_Output(MCdata,types=1,N_budget=3,N_runs=100,L=3,l=3)
+MLBMCE = Get_Output(MCdata,types=0,N_budget=2,N_runs=100,L=3,l=3)--3.417076
+MLBMCEl1 = Get_Output(MCdata,types=0,N_budget=2,N_runs=100,L=3,l=2)--3.417076
+MLBMCV = Get_Output(MCdata,types=1,N_budget=2,N_runs=100,L=3,l=3)
 
-MLMCE = Get_Output(MCdata,types=2,N_budget=3,N_runs=100,L=3,l=3)--3.417076
-MLMCEl1 = Get_Output(MCdata,types=2,N_budget=3,N_runs=100,L=3,l=2)--3.417076
+MLMCE = Get_Output(MCdata,types=2,N_budget=2,N_runs=100,L=3,l=3)--3.417076
+MLMCEl1 = Get_Output(MCdata,types=2,N_budget=2,N_runs=100,L=3,l=2)--3.417076
 
 # estimation with optimal sample size of MLMC and Big budget
 MLMCbigE = Get_Output(MCbigdata,types=0,N_budget=2,N_runs=100,L=3,l=3)--3.417076
 
 # estimation with optimal sample size of MLMC and QMC point
 QMCdata = pd.read_csv(r"ODE_Halton.csv", header=None)
-QMCE = Get_Output(QMCdata,types=0,N_budget=3,N_runs=100,L=1,l=1)--3.417076
+QMCE = Get_Output(QMCdata,types=0,N_budget=2,N_runs=100,L=1,l=1)--3.417076
 
 # estimation with optimal sample size of MLMC and LHS point
 LHSdata = pd.read_csv(r"ODE_LHS.csv", header=None)
-LHSE = Get_Output(LHSdata,types=0,N_budget=3,N_runs=100,L=1,l=1)--3.417076
+LHSE = Get_Output(LHSdata,types=0,N_budget=2,N_runs=100,L=1,l=1)--3.417076
 
 # estimation with optimal sample size of MLMC and SE kernel
-GaussE = Get_Output(Gaussdata,types=0,N_budget=3,N_runs=100,L=1,l=1)--3.417076
+GaussE = Get_Output(Gaussdata,types=0,N_budget=2,N_runs=100,L=1,l=1)--3.417076
 
 
 #compute the covarage probability
