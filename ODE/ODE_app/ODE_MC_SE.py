@@ -33,7 +33,7 @@ for i in range(100):
     np.random.seed(seed=i+1234)
 
     # Iterate for different budget sizes
-    for n_level in range(3):
+    for n_level in range(2):
 
         if n_level == 0:
             my_nugget = 1e-6
