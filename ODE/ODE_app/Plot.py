@@ -58,7 +58,7 @@ sns.set_style("ticks")
 plt.figure(figsize=(18,6))
 plt.rcParams['font.size'] = '15'
 
-Sample_Cons = ["0.303","0.910","1.517"]
+Sample_Cons = ["0.303","1.517"]
 BigSample_Cons = ["30.347","151.736"]
 N_runs=100
 
@@ -66,7 +66,7 @@ N_runs=100
 
 Err=pd.DataFrame(columns=["Budget T (s)","Estimator","Absolute Error"])
 
-for i in [0,2]:
+for i in range(2):
     data = {
         "Budget T (s)": np.repeat(Sample_Cons[i], N_runs*6),
         "Estimator": np.repeat([ "MLBQ 2.5 QMC","MLBQ 2.5 LHS","MLBQ SE IID","MLBQ 2.5 IID",  "BQ 2.5 IID", "MLMC"], N_runs),
@@ -100,7 +100,7 @@ plt.ylabel('Absolute Error', fontsize=18)
 
 levelsS3=pd.DataFrame(columns=["Budget T (s)","Estimator","Absolute Error","L"])
 
-for i in [0,2,]:
+for i in range(2):
     for j in range(1,3):
         if j==1:
             data = {
@@ -150,7 +150,7 @@ refdf = pd.DataFrame(refdiag)
 Calib=pd.DataFrame(columns=["Budget T (s)","Estimator","Credible Level","Coverage Probability"])
 
 
-for i in [0,2]:
+for i in range(2):
     data = {
         "Budget T (s)": np.repeat(Sample_Cons[i], 12),
         "Estimator": np.repeat(["MLBQ 2.5 IID", "BQ 2.5 IID"],6),
