@@ -10,14 +10,14 @@ import pandas as pd
 # MLBQ Matern / SE + iid and MLMC
 A3data = pd.read_csv(r"Est_A3.csv", header=None)
 
-A3E1=Get_Output(A3data,types=0,N_budget=3,N_runs=100,L=3,l=3)-5.
-A3E2=Get_Output(A3data,types=2,N_budget=3,N_runs=100,L=3,l=3)-5.
-A3E3=Get_Output(A3data,types=4,N_budget=3,N_runs=100,L=3,l=2)-5.
+A3E1=Get_Output(A3data,types=0,N_budget=2,N_runs=100,L=3,l=3)-5.
+A3E2=Get_Output(A3data,types=2,N_budget=2,N_runs=100,L=3,l=3)-5.
+A3E3=Get_Output(A3data,types=4,N_budget=2,N_runs=100,L=3,l=2)-5.
 
 # Matern / SE kernel + bad design
 A5bdata = pd.read_csv(r"Est_A5b.csv", header=None)
-A5bE1=Get_Output(A5bdata,types=0,N_budget=3,N_runs=100,L=3,l=3)-5.
-A5bE2=Get_Output(A5bdata,types=2,N_budget=3,N_runs=100,L=3,l=3)-5.
+A5bE1=Get_Output(A5bdata,types=0,N_budget=2,N_runs=100,L=3,l=3)-5.
+A5bE2=Get_Output(A5bdata,types=2,N_budget=2,N_runs=100,L=3,l=3)-5.
 
 
 
